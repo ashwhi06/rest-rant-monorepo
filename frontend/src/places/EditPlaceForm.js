@@ -30,7 +30,8 @@ function EditPlaceForm() {
 		await fetch(`${process.env.REACT_APP_SERVER_URL}places/${place.placeId}`, {
 			method: 'PUT',
 			headers: {
-				'Content-Type': 'application/json'
+				'Content-Type': 'application/json',  
+				'Access-Control-Allow-Origin' : '*',
 			},
 			body: JSON.stringify(place)
 		})
